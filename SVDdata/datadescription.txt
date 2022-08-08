@@ -1,0 +1,1 @@
+This folder contains data corresponding to the German sentence uttered by healthy speakers and patients with voice disorders
