@@ -46,7 +46,7 @@ for i = 1:numel(speechdata)
 end
 close(h)
 
-%% ---------------- Training and Testing -------------
+%% ---------------- Training and Evaluation -------------
 % Perform 5-fold cross-validation with 80% speakers data for training and
 % 20% speakers data for testing in each fold.
 
@@ -76,7 +76,6 @@ stats_mlp = [stats_mlp Mmlp];
 
 end
 
-fprintf(' Classifier \t Sensitivity \t Precision \t  F1-measure \t Accuracy \t  mcc \n');
+fprintf(' Classifier \t Recall \t Precision \t  F1-measure \t Accuracy \t  mcc \n');
 disp('----------------------------------------------------------------------------------------------');
 fprintf(' WSN \t\t %.2f \t\t %.2f \t\t %.2f \t\t %.2f \t\t %.2f \n', mean([stats_mlp.Recall])*100, mean([stats_mlp.Precision])*100,mean([stats_mlp.F1score])*100, mean([stats_mlp.Accuracy])*100, mean([stats_mlp.mcc]));
-fprintf(' WSN \t\t %.2f \t\t %.2f \t\t %.2f \t\t %.2f \t\t %.2f \n', std([stats_mlp.Recall])*100, std([stats_mlp.Precision])*100,std([stats_mlp.F1score])*100, std([stats_mlp.Accuracy])*100, std([stats_mlp.mcc]));
