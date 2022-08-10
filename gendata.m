@@ -1,5 +1,5 @@
 function [Xtr, Ytr, Xte, Yte] = gendata(ipd,labels, testind)
-% The function requires input (ipd) to be a cell array with each a matrix
+% The function requires input (ipd) to be a cell array with each cell as a matrix
 
 trn = ipd(~testind);
 ytrn = labels(~testind);
