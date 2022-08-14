@@ -3,7 +3,7 @@ rng(3,'twister')
 
 %% ------------------- Reading and preparing data -------------------
 fs = 16000;
-wavdir = './SVDdata';
+wavdir = './database';
 T = readtable([wavdir '/metadata.xlsx']);
 T1 = T{:,1};
 L1 = table2array(T(:,2));
